@@ -11,5 +11,5 @@ CREATE TABLE purchase (
   FOREIGN KEY fk_pur_cust (cid)
   REFERENCES customer (cid)
     ON UPDATE CASCADE
-    ON DELETE RESTRICT
+    ON DELETE CASCADE
 );

@@ -10,5 +10,5 @@ CREATE TABLE writes (
   FOREIGN KEY fk_write_author (aid)
   REFERENCES author (aid)
     ON UPDATE CASCADE
-    ON DELETE RESTRICT
+    ON DELETE CASCADE
 );

@@ -2,7 +2,7 @@
 CREATE TABLE book (
   ISBN13   BIGINT         NOT NULL,
   title    VARCHAR(200)   NOT NULL,
-  year     DATE           NOT NULL,
+  year     YEAR(4)        NOT NULL,
   category VARCHAR(200)   NOT NULL,
   pname    VARCHAR(200)   NOT NULL,
   price    DECIMAL(10, 2) NOT NULL,
@@ -10,5 +10,5 @@ CREATE TABLE book (
   FOREIGN KEY fk_book (pname)
   REFERENCES publisher (pname)
     ON UPDATE CASCADE
-    ON DELETE RESTRICT
+    ON DELETE CASCADE
 );
